@@ -2,12 +2,25 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: ctranstrum # <-- add this for the keyboard
+      url-base: https://github.com/ctranstrum
+    - name: caksoylar # <-- and this for the LED
+      url-base: https://github.com/caksoylar
+    # - name: englmaxi # <-- if you want a dongle
+    #   url-base: https://github.com/englmaxi
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: lintilla # <-- add this for the keyboard
+      remote: ctranstrum
+      revision: zmk
+    - name: zmk-rgbled-widget # <-- and this for the LED
+      remote: caksoylar
+      revision: main
+    # - name: zmk-dongle-dislay
+    #   remote: englmaxi
+    #   revision: main
   self:
     path: config
