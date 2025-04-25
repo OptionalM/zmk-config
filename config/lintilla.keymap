@@ -92,6 +92,18 @@
     keymap {
         compatible = "zmk,keymap";
 
+        alphas {
+            bindings = <
+       &none                                                                                                                                                                     &none
+&none  &kp Q       &kp W       &kp F        &kp P         &kp B                                                      &kp J          &kp L         &kp U        &kp Y       &kp SQT     &none
+&none  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHIFT T  &kp G                                                      &kp M          &hm LSHIFT N  &hm LCTRL E  &hm LALT I  &hm LGUI O  &none
+       &kp Z       &kp X       &kp C        &kp D         &kp V                                                      &kp K          &kp H         &kp COMMA    &kp DOT     &kp FSLH
+                                                          &lt 1 ESC  &lt 2 SPACE  &lt 3 TAB   &lt 4 RET  &lt 5 BSPC  &lt 6 DEL
+            >;
+
+            label = "Colemak-dh";
+        };
+
         num {
             bindings = <
         &trans                                                                                                                   &trans
