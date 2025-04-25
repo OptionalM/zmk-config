@@ -163,8 +163,6 @@
 
             label = "Function";
         };
-
-        // Extra empty layers for ZMK Studionum {};
     };
 };
 
