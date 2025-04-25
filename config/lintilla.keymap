@@ -98,7 +98,7 @@
 &none  &kp Q       &kp W       &kp F        &kp P         &kp B                                                     &kp J      &kp L         &kp U        &kp Y       &kp SQT     &none
 &none  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHIFT T  &kp G                                                     &kp M      &hm LSHIFT N  &hm LCTRL E  &hm LALT I  &hm LGUI O  &none
        &kp Z       &kp X       &kp C        &kp D         &kp V                                                     &kp K      &kp H         &kp COMMA    &kp DOT     &kp FSLH
-                                                          &lt 4 ESC  &lt 5 SPACE  &lt 2 TAB  &lt 1 RET  &lt 0 BSPC  &lt 0 DEL
+                                                          &lt 2 ESC  &lt 1 SPACE  &lt 1 TAB  &lt 4 RET  &lt 3 BSPC  &lt 5 DEL
             >;
 
             label = "Colemak-dh";
