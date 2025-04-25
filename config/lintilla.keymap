@@ -4,22 +4,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/rgbled_widget.dtsi>
 
-// Multiple mods
-#define GS(key) &kp LG(LS(key))
-#define GCS(key) &kp LG(LC(LS(key)))
-#define HYPR(key) &kp LG(LA(LC(LS(key))))
-
-// Shortcuts for home row mods
-#define Glb &hm GLOBE
-#define Sft &hm LSHFT
-#define Ctl &hm LCTRL
-#define Opt &hm LALT
-#define Cmd &hm LGUI
-#define Alt &hm RALT
-
-// Magic bluetooth button
-#define BT_(btnum) &bt_key btnum btnum
-
 / {
     behaviors {
         bt_key: magic_bluetooth_key {
@@ -44,7 +28,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <HYPR(N4)>, <&kp LC(UP)>;
+            bindings = <&kp N4>, <&kp LC(UP)>;
         };
 
         lsscw: layer_sticky_shift_caps_word {
@@ -129,7 +113,7 @@
     &kp ESC  &kp Q   &kp W   &kp E   &kp R   &kp T                              &kp Y   &kp U   &kp I   &kp O   &kp P  &kp BSPC
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫                          ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃  TAB  ┃   A   ┃   S   ┃   D   ┃   F   ┃   G   ┃                          ┃   H   ┃   J   ┃   K   ┃   L   ┃  ' "  ┃RETURN ┃
-    Glb TAB  Sft A   Ctl S   Opt D   Cmd F   Alt G                              Alt H   Cmd J   Opt K   Ctl L  Sft SQT Glb RET
+   &hm GLOBE TAB &hm LSHFT A &hm LCTRL S &hm LALT D &hm LGUI F &hm RALT G   &hm RALT H &hm LGUI J &hm LALT K &hm LCTRL L &hm LSHFT SQT &hm GLOBE RET
 // ┃ Globe ┃ Shift ┃ Ctrl  ┃  Opt  ┃  Cmd  ┃ R Alt ┃                          ┃ R Alt ┃  Cmd  ┃  Opt  ┃ Ctrl  ┃ Shift ┃ Globe ┃
 // ┗━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫                          ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┛
 //         ┃   Z   ┃   X   ┃   C   ┃   V   ┃   B   ┃                          ┃   N   ┃   M   ┃  , ;  ┃  . :  ┃  / \  ┃
@@ -254,10 +238,10 @@
            &flash 6                                                                                             &trans
 // ┏━━━━━━━╋━━━━━━━╋━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓                          ┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━╋━━━━━━━╋━━━━━━━┓
 // ┃ brt + ┃       ┃       ┃scrnsht┃scrn cp┃ vol + ┃                          ┃con led┃       ┃bat led┃       ┃       ┃       ┃
-&kp C_BRI_UP &none   &none  GS(N4) GCS(N4) &kp C_VOL_UP                       &ind_con  &none &ind_bat  &none   &none   &none
+&kp C_BRI_UP &none   &none  &none   &none  &kp C_VOL_UP                       &ind_con  &none &ind_bat  &none   &none   &none
 // ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫                          ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫
 // ┃ brt - ┃  BT1  ┃  BT2  ┃  BT3  ┃  BT4  ┃  BT5  ┃                          ┃       ┃       ┃       ┃       ┃       ┃       ┃
-&kp C_BRI_DN BT_(0)  BT_(1)  BT_(2)  BT_(3)  BT_(4)                             &none   &none   &none   &none   &none   &none
+&kp C_BRI_DN &none   &none   &none   &none   &none                              &none   &none   &none   &none   &none   &none
 // ┗━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┫                          ┣━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━╋━━━━━━━┛
 //         ┃ flash ┃       ┃caps lk┃       ┃ vol - ┃                          ┃       ┃       ┃       ┃       ┃ flash ┃
         &bootloader &none &kp CAPS &none &kp C_VOL_DN                           &none   &none   &none   &none &bootloader
