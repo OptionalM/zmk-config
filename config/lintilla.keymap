@@ -86,6 +86,41 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER &bt BT_CLR>;
         };
+
+        win_ellipsis: elipse {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT &kp N0 &kp N1 &kp N3 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ELIPSE";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_LBKT {
+            bindings = <&hm LC(LSHFT) LBKT>;
+            key-positions = <17 18>;
+            layers = <0>;
+            timeout-ms = <50>;
+        };
+
+        combo_RBKT {
+            bindings = <&hm LC(LSHFT) RBKT>;
+            key-positions = <21 22>;
+            layers = <0>;
+            timeout-ms = <50>;
+        };
+
+        combo_elipse {
+            bindings = <&win_ellipsis>;
+            key-positions = <33 34>;
+        };
     };
 
     keymap {
@@ -93,11 +128,11 @@
 
         alphas {
             bindings = <
-       &none                                                                                                                                                         &none
-&none  &kp Q       &kp W       &kp F        &kp P         &kp B                                                  &kp J      &kp L         &kp U        &kp Y         &kp SQT     &none
-&none  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T   &kp G                                                  &kp M      &hm LSHFT N   &hm LCTRL E  &hm LALT I    &hm LGUI O  &none
-       &kp Z       &hm RALT X  &kp C        &kp D         &kp V                                                  &kp K      &kp H         &kp COMMA    &hm RALT DOT  &kp FSLH
-                                                          &lt 2 TAB  &lt 1 SPC &lt 1 ESC  &lt 5 DEL  &lt 3 BSPC  &lt 4 RET
+       &none                                                                                                                                                        &none
+&none  &kp Q       &kp W       &kp F        &kp P        &kp B                                                   &kp J      &kp L        &kp U        &kp Y         &kp SQT     &none
+&none  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T  &kp G                                                   &kp M      &hm LSHFT N  &hm LCTRL E  &hm LALT I    &hm LGUI O  &none
+       &kp Z       &hm RALT X  &kp C        &kp D        &kp V                                                   &kp K      &kp H        &kp COMMA    &hm RALT DOT  &kp FSLH
+                                                         &lt 2 TAB  &lt 1 SPC  &lt 1 ESC  &lt 5 DEL  &lt 3 BSPC  &lt 4 RET
             >;
 
             label = "Colemak-dh";
@@ -135,6 +170,7 @@
         &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH                                    &none  &none      &none      &kp RALT  &none
                                            &kp DOT    &kp N0  &kp MINUS  &none  &none  &none
             >;
+
             label = "Numbers";
         };
 
@@ -152,11 +188,11 @@
 
         fun {
             bindings = <
-        &trans                                                                                                                     &trans
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN                                          &none  &none      &none      &none     &none     &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK                                           &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-        &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK                                    &none  &none      &none      &kp RALT  &none
-                                         &kp TAB  &kp SPC  &kp K_APPLICATION  &none  &none  &none
+        &trans                                                                                                                             &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN                                                  &none  &none      &none      &none     &none     &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK                                                   &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+        &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK                                            &none  &none      &none      &kp RALT  &none
+                                         &kp TAB          &kp SPC  &kp K_APPLICATION  &none  &none  &none
             >;
 
             label = "Function";
