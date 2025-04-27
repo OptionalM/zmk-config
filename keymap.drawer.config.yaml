@@ -1,0 +1,60 @@
+parse_config:
+  modifier_fn_map:
+    left_shift: ⇧
+    left_alt: ⌥
+    right_alt: AltGr
+    left_ctrl: ^
+    left_gui: ⌘
+    keycode_combiner: "{mods}{key}"
+    mod_combiner: "{mod_1}{mod_2}"
+  raw_binding_map:
+    "&kp LALT": ⌥
+    "&kp RALT": AltGr
+    "&kp LCTRL": ^
+    "&kp LGUI": ⌘
+    "&kp LSFT": ⇧
+    "&kp LSHFT": ⇧
+    "&bt_sel 0": BT 1
+    "&bt_sel 1": BT 2
+    "&bt_sel 2": BT 3
+    "&bt_sel 3": BT 4
+    "&bt_sel 4": BT 5
+    "&bt_clr 0": clear 1
+    "&bt_clr 1": clear 2
+    "&bt_clr 2": clear 3
+    "&bt_clr 3": clear 4
+    "&bt_clr 4": clear 5
+    "&u_caps_word": caps word
+    "&ind_bat": battery status
+    "&ind_con": BT status
+    "&kp BSPC": ⌫
+    "&kp DEL": ⌦
+    "&kp ESC": Esc
+    "&kp RET": ↵
+    "&kp SPC": ␣
+    "&kp TAB": ⇥
+    "&kp UP": ↑
+    "&kp DOWN": ↓
+    "&kp LEFT": ←
+    "&kp RIGHT": →
+    "&kp HOME": Home
+    "&kp END": End
+    "&kp PG_UP": PgUp
+    "&kp PG_DN": PgDn
+    "&kp PSCRN": Print Screen
+    "&kp SLCK": Screen 🔒
+    "&kp PAUSE_BREAK": Pause Break
+    "&kp INS": Insert
+    "&kp C_PREV": ⏮
+    "&kp C_NEXT": ⏭
+    "&kp C_VOL_DN": $$mdi:volume-plus$$
+    "&kp C_VOL_UP": $$mdi:volume-minus$$
+    "&kp C_STOP": $$mdi:stop$$
+    "&kp C_PP": $$mdi:play-pause$$
+    "&kp C_MUTE": $$mdi:volume-mute$$
+    "&kp LC(Z)": $$mdi:undo$$
+    "&kp LS(INS)": $$mdi:content-paste$$
+    "&kp LC(INS)": $$mdi:content-copy$$
+    "&kp LS(DEL)": $$mdi:content-cut$$
+    "&kp LC(A)": $$mdi:select-all$$
+    "&kp K_APPLICATION": $$mdi:menu$$
