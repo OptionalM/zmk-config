@@ -91,12 +91,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LALT &kp N0 &kp N1 &kp N3 &kp N3>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "ELIPSE";
+                <&macro_press   &kp LALT>,
+                <&macro_tap     &kp N0 &kp N1 &kp N3 &kp N3>,
+                <&macro_release &kp LALT>;
         };
     };
 
