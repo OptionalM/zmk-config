@@ -93,11 +93,11 @@
 
         alphas {
             bindings = <
-       &none                                                                                                                                                            &none
-&none  &kp Q       &kp W       &kp F        &kp P         &kp B                                                     &kp J      &kp L         &kp U        &kp Y         &kp SQT     &none
-&none  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHIFT T  &kp G                                                     &kp M      &hm LSHIFT N  &hm LCTRL E  &hm LALT I    &hm LGUI O  &none
-       &kp Z       &hm RALT X  &kp C        &kp D         &kp V                                                     &kp K      &kp H         &kp COMMA    &hm RALT DOT  &kp FSLH
-                                                          &lt 2 ESC  &lt 1 SPACE  &lt 1 TAB  &lt 4 RET  &lt 3 BSPC  &lt 5 DEL
+       &none                                                                                                                                                         &none
+&none  &kp Q       &kp W       &kp F        &kp P         &kp B                                                  &kp J      &kp L         &kp U        &kp Y         &kp SQT     &none
+&none  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T   &kp G                                                  &kp M      &hm LSHFT N   &hm LCTRL E  &hm LALT I    &hm LGUI O  &none
+       &kp Z       &hm RALT X  &kp C        &kp D         &kp V                                                  &kp K      &kp H         &kp COMMA    &hm RALT DOT  &kp FSLH
+                                                          &lt 2 ESC  &lt 1 SPC &lt 1 TAB  &lt 4 RET  &lt 3 BSPC  &lt 5 DEL
             >;
 
             label = "Colemak-dh";
@@ -105,11 +105,11 @@
 
         nav {
             bindings = <
-        &trans                                                                                                                                   &trans
-&trans  &none     &none     &none      &none      &none                                     &kp LC(Z)     &kp LS(INS)  &kp LC(INS)  &kp LS(DEL)  &kp LC(A)  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                                     &u_caps_word  &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT  &trans
-        &none     &kp RALT  &none      &none      &none                                     &kp INS       &kp HOME     &kp PG_DN    &kp PG_UP    &kp END
-                                                  &none  &none  &none  &kp ENTER  &kp BSPC  &kp DEL
+        &trans                                                                                                                                 &trans
+&trans  &none     &none     &none      &none      &none                                   &kp LC(Z)     &kp LS(INS)  &kp LC(INS)  &kp LS(DEL)  &kp LC(A)  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                                   &u_caps_word  &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT  &trans
+        &none     &kp RALT  &none      &none      &none                                   &kp INS       &kp HOME     &kp PG_DN    &kp PG_UP    &kp END
+                                                  &none  &none  &none  &kp RET  &kp BSPC  &kp DEL
             >;
 
             label = "Navigation";
@@ -118,7 +118,7 @@
         media {
             bindings = <
         &trans                                                                                                                                   &trans
-&trans  &none     &none     &none      &none      &none                                      &none       &none       &none         &none         &none       &trans
+&trans  &none     &none     &none      &none      &none                                      &none       &ind_bat    &ind_con      &none         &none       &trans
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                                      &none       &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &trans
         &none     &kp RALT  &none      &none      &none                                      &out_tog    &bt_sel_0   &bt_sel_1     &bt_sel_2     &bt_sel_3
                                                   &none  &none  &none  &kp C_STOP  &kp C_PP  &kp C_MUTE
@@ -153,11 +153,11 @@
 
         fun {
             bindings = <
-        &trans                                                                                                                       &trans
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN                                            &none  &none      &none      &none     &none     &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK                                             &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-        &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK                                      &none  &none      &none      &kp RALT  &none
-                                         &kp K_APPLICATION  &kp SPACE  &kp TAB  &none  &none  &none
+        &trans                                                                                                                     &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN                                          &none  &none      &none      &none     &none     &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK                                           &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+        &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK                                    &none  &none      &none      &kp RALT  &none
+                                         &kp K_APPLICATION  &kp SPC  &kp TAB  &none  &none  &none
             >;
 
             label = "Function";
