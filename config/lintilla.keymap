@@ -106,12 +106,6 @@
             bindings = <&macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER &bt BT_CLR>;
         };
 
-        ellipsis: ellipsis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp KP_N0 &kp KP_N1 &kp KP_N3 &kp KP_N3>;
-        };
-
         win_ellipsis: win_ellipsis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -119,27 +113,9 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&ellipsis>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N3 &kp KP_N3>,
                 <&macro_release>,
                 <&kp LALT>;
-
-            label = "WIN_ELLIPSIS";
-        };
-
-        ae_low: ae_low {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>;
-
-            label = "AE_LOW";
-        };
-
-        ae_up: ae_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>;
-
-            label = "AE_UP";
         };
 
         win_ae_low: win_ae_low {
@@ -149,7 +125,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&ae_low>,
+                <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -163,7 +139,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&ae_up>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -189,7 +165,7 @@
         };
 
         combo_elipse {
-            bindings = <&ellipsis>;
+            bindings = <&win_ellipsis>;
             key-positions = <33 34>;
             layers = <0>;
         };
