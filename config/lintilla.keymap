@@ -132,7 +132,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_release>,
-                <&kp LSHFT>;
+                <&kp LSHFT>,
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
