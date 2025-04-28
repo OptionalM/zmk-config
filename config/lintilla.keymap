@@ -117,7 +117,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT &ellipsis>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&ellipsis>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -145,7 +147,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT &ae_low>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&ae_low>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -157,7 +161,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT &ae_up>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&ae_up>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -206,11 +212,11 @@
 
         alphas {
             bindings = <
-       &none                                                                                                                                                        &none
-&none  &kp Q       &kp W       &kp F        &kp P        &kp B                                                   &kp J      &kp L        &kp U        &kp Y         &kp SQT     &none
-&sl 6  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T  &kp G                                                   &kp M      &hm LSHFT N  &hm LCTRL E  &hm LALT I    &hm LGUI O  &sl_mod 6
-       &kp Z       &hm RALT X  &kp C        &kp D        &kp V                                                   &kp K      &kp H        &kp COMMA    &hm RALT DOT  &kp FSLH
-                                                         &lt 2 TAB  &lt 1 SPC  &lt 1 ESC  &lt 5 DEL  &lt 3 BSPC  &lt 4 RET
+           &none                                                                                                                                                        &none
+&none      &kp Q       &kp W       &kp F        &kp P        &kp B                                                   &kp J      &kp L        &kp U        &kp Y         &kp SQT     &none
+&sl_mod 6  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T  &kp G                                                   &kp M      &hm LSHFT N  &hm LCTRL E  &hm LALT I    &hm LGUI O  &sl_mod 6
+           &kp Z       &hm RALT X  &kp C        &kp D        &kp V                                                   &kp K      &kp H        &kp COMMA    &hm RALT DOT  &kp FSLH
+                                                             &lt 2 TAB  &lt 1 SPC  &lt 1 ESC  &lt 5 DEL  &lt 3 BSPC  &lt 4 RET
             >;
 
             label = "Colemak-dh";
