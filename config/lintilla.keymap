@@ -131,6 +131,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_release>,
+                <&kp LSHFT>;
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
@@ -181,7 +183,7 @@
 
         alphas {
             bindings = <
-           &win_ae                                                                                                                                                      &win_ae_up
+           &win_ae                                                                                                                                                      &none
 &none      &kp Q       &kp W       &kp F        &kp P        &kp B                                                   &kp J      &kp L        &kp U        &kp Y         &kp SQT     &none
 &sl_mod 6  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T  &kp G                                                   &kp M      &hm LSHFT N  &hm LCTRL E  &hm LALT I    &hm LGUI O  &sl_mod 6
            &kp Z       &hm RALT X  &kp C        &kp D        &kp V                                                   &kp K      &kp H        &kp COMMA    &hm RALT DOT  &kp FSLH
