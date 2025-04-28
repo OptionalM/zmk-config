@@ -74,16 +74,13 @@
 
         win_ae: win_ae {
             compatible = "zmk,behavior-mod-morph";
-            label = "WIN_AE";
             bindings = <&win_ae_low>, <&win_ae_up>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         sl_mod: sl_mod {
             compatible = "zmk,behavior-sticky-key";
-            label = "SL_MOD";
             bindings = <&mo>;
             #binding-cells = <1>;
             release-after-ms = <3000>;
@@ -128,8 +125,6 @@
                 <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>,
                 <&macro_release>,
                 <&kp LALT>;
-
-            label = "WIN_AE_LOW";
         };
 
         win_ae_up: win_ae_up {
@@ -142,8 +137,6 @@
                 <&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>,
                 <&macro_release>,
                 <&kp LALT>;
-
-            label = "WIN_AE_UP";
         };
     };
 
@@ -188,7 +181,7 @@
 
         alphas {
             bindings = <
-           &win_ae                                                                                                                                                      &none
+           &win_ae                                                                                                                                                      &win_ae_up
 &none      &kp Q       &kp W       &kp F        &kp P        &kp B                                                   &kp J      &kp L        &kp U        &kp Y         &kp SQT     &none
 &sl_mod 6  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T  &kp G                                                   &kp M      &hm LSHFT N  &hm LCTRL E  &hm LALT I    &hm LGUI O  &sl_mod 6
            &kp Z       &hm RALT X  &kp C        &kp D        &kp V                                                   &kp K      &kp H        &kp COMMA    &hm RALT DOT  &kp FSLH
