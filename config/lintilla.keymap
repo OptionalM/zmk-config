@@ -20,7 +20,7 @@
             compatible = "zmk,behavior-sticky-key";
             bindings = <&mo>;
             #binding-cells = <1>;
-            release-after-ms = <3000>;
+            release-after-ms = <1000>;
             ignore-modifiers;
         };
 
@@ -83,6 +83,7 @@
         win_ae: win_ae {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&win_ae_low>, <&win_ae_up>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -90,6 +91,7 @@
         win_ie: win_ie {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&win_ie_low>, <&win_ie_up>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -97,6 +99,7 @@
         win_oe: win_oe {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&win_oe_low>, <&win_oe_up>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -104,6 +107,7 @@
         win_ue: win_ue {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&win_ue_low>, <&win_ue_up>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -111,6 +115,7 @@
         win_agrave: win_agrave {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&win_agrave_low>, <&win_agrave_up>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -118,6 +123,7 @@
         win_eaigu: win_eaigu {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&win_eaigu_low>, <&win_eaigu_up>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -125,10 +131,10 @@
         win_dash: win_dash {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&win_emdash>, <&win_endash>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -183,7 +189,7 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
-            
+
         win_oe_low: win_oe_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -420,14 +426,14 @@
             bindings = <&hm LC(LSHFT) LBKT>;
             key-positions = <17 18>;
             layers = <0>;
-            timeout-ms = <30>;
+            timeout-ms = <20>;
         };
 
-        combo_RBKT {
-            bindings = <&hm LC(LSHFT) RBKT>;
+        combo_minus {
+            bindings = <&hm LC(LSHFT) MINUS>;
             key-positions = <21 22>;
             layers = <0>;
-            timeout-ms = <30>;
+            timeout-ms = <20>;
         };
 
         combo_elipse {
