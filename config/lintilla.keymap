@@ -477,17 +477,13 @@
         linux_ellipsis: linux_ellipsis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp DOT &kp DOT>;
+            bindings = <&macro_tap>, <&kp RALT &kp DOT &kp DOT>;
         };
 
         linux_ae_low: linux_ae_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp A &kp DQT>;
+            bindings = <&macro_tap>, <&kp RALT &kp A &kp DQT>;
         };
 
         linux_ae_up: linux_ae_up {
@@ -503,9 +499,7 @@
         linux_oe_low: linux_oe_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp O &kp DQT>;
+            bindings = <&macro_tap>, <&kp RALT &kp O &kp DQT>;
         };
 
         linux_oe_up: linux_oe_up {
@@ -521,9 +515,7 @@
         linux_ue_low: linux_ue_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp U &kp DQT>;
+            bindings = <&macro_tap>, <&kp RALT &kp U &kp DQT>;
         };
 
         linux_ue_up: linux_ue_up {
@@ -539,9 +531,7 @@
         linux_ie_low: linux_ie_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp U &kp DQT>;
+            bindings = <&macro_tap>, <&kp RALT &kp U &kp DQT>;
         };
 
         linux_ie_up: linux_ie_up {
@@ -557,9 +547,7 @@
         linux_eaigu_low: linux_eaigu_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp E &kp SQT>;
+            bindings = <&macro_tap>, <&kp RALT &kp E &kp SQT>;
         };
 
         linux_eaigu_up: linux_eaigu_up {
@@ -575,9 +563,7 @@
         linux_agrave_low: linux_agrave_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp A &kp GRAVE>;
+            bindings = <&macro_tap>, <&kp RALT &kp A &kp GRAVE>;
         };
 
         linux_agrave_up: linux_agrave_up {
@@ -593,25 +579,19 @@
         linux_sz: linux_sz {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp S &kp S>;
+            bindings = <&macro_tap>, <&kp RALT &kp S &kp S>;
         };
 
         linux_ostroke: linux_ostroke {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp O &kp FSLH>;
+            bindings = <&macro_tap>, <&kp RALT &kp O &kp FSLH>;
         };
 
         linux_emdash: linux_emdash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp MINUS &kp MINUS &kp MINUS>;
+            bindings = <&macro_tap>, <&kp RALT &kp MINUS &kp MINUS &kp MINUS>;
         };
 
         linux_endash: linux_endash {
@@ -627,33 +607,25 @@
         linux_euro: linux_euro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp E &kp EQUAL>;
+            bindings = <&macro_tap>, <&kp RALT &kp E &kp EQUAL>;
         };
 
         linux_deg: linux_deg {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp O &kp O>;
+            bindings = <&macro_tap>, <&kp RALT &kp O &kp O>;
         };
 
         linux_qo: linux_qo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp LT &kp LT>;
+            bindings = <&macro_tap>, <&kp RALT &kp LT &kp LT>;
         };
 
         linux_qc: linux_qc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RALT &kp GT &kp GT>;
+            bindings = <&macro_tap>, <&kp RALT &kp GT &kp GT>;
         };
     };
 
@@ -675,7 +647,7 @@
         };
 
         combo_elipse {
-            bindings = <&win_ellipsis>;
+            bindings = <&linux_ellipsis>;
             key-positions = <33 34>;
             layers = <0>;
         };
@@ -690,6 +662,12 @@
             bindings = <&mkp MB5>;
             key-positions = <23 24>;
             layers = <1>;
+        };
+
+        combo_winelipse {
+            bindings = <&win_ellipsis>;
+            key-positions = <33 34 32>;
+            layers = <0>;
         };
     };
 
@@ -770,7 +748,7 @@
 
         lang {
             bindings = <
-       &none                                                                                                                           &none
+       &none                                                                                                                                      &none
 &none  &none          &none        &none      &linux_ostroke  &none                                    &none  &none      &linux_ue     &none      &linux_deg  &none
 &none  &linux_ae      &linux_euro  &linux_sz  &kp LSHFT       &none                                    &none  &kp LSHFT  &linux_eaigu  &linux_ie  &linux_oe   &none
        &linux_agrave  &none        &none      &none           &none                                    &none  &none      &linux_qo     &linux_qc  &none
