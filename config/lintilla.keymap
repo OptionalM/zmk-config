@@ -531,7 +531,7 @@
         linux_ie_low: linux_ie_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp RALT &kp U &kp DQT>;
+            bindings = <&macro_tap>, <&kp RALT &kp I &kp DQT>;
         };
 
         linux_ie_up: linux_ie_up {
